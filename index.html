@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <!-- Audio Section -->
+    <audio id="tapSound" src="./tap.wav"></audio>
+    <audio id="equalSound" src="./equal.wav"></audio>
+
+    <div class="calculator">
+        <!-- Display Section -->
+        <div class="display">
+            <input class="miniDisplay" type="text" id="calculatorDisplayHistory2" >
+            <input class="miniDisplay2" type="text" id="calculatorDisplayHistory" >
+            <input type="text" id="calculatorDisplay" readonly>
+        </div>
+
+        <!-- Theme Switch -->
+        <div class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <label for="themeToggle" class="theme-toggle-label"></label>
+        </div>
+
+        <!-- Keys Section -->
+        <div class="keys">
+            <button class="spcBtn" onclick="backspace()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
+                </svg>
+            </button>
+
+            <button class="spcBtn" onclick="clearDisplay()">AC</button>
+            <button class="spcBtn" onclick="appendRes('%')">%</button>
+            <button class="spcBtn" onclick="appendRes('/')">/</button>
+            <button onclick="appendRes('7')">7</button>
+            <button onclick="appendRes('8')">8</button>
+            <button onclick="appendRes('9')">9</button>
+            <button class="spcBtn" onclick="appendRes('*')">x</button>
+            <button onclick="appendRes('4')">4</button>
+            <button onclick="appendRes('5')">5</button>
+            <button onclick="appendRes('6')">6</button>
+            <button class="spcBtn" onclick="appendRes('+')">+</button>
+            <button onclick="appendRes('1')">1</button>
+            <button onclick="appendRes('2')">2</button>
+            <button onclick="appendRes('3')">3</button>
+            <button class="spcBtn" onclick="appendRes('-')">-</button>
+            <button onclick="appendRes('0')">0</button>
+            <button onclick="appendRes('.')">.</button>
+            <button onclick="calc()" class="equalBtn">=</button>
+        </div>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
