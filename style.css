@@ -67,10 +67,9 @@ body {
 
 .keys {
     display: grid;
-    height: 8%;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    height: 80%;
+    height: 70%;
 }
 
 .keys button {
